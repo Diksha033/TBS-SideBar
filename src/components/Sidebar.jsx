@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import {
     FaTh,
     FaBars,
-    FaUserAlt,
-    FaRegChartBar,
-    FaCommentAlt,
-    FaShoppingBag,
-    FaThList
+    FaLaravel,
+    FaProductHunt,
+    FaGrin,
+    FaFile,
+    FaFileSignature,
+    FaChartBar,
+    FaPaypal,
+    FaBalanceScale,
 }from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 
@@ -21,36 +24,52 @@ const Sidebar = ({children}) => {
             icon:<FaTh/>
         },
         {
-            path:"/about",
-            name:"About",
-            icon:<FaUserAlt/>
+            path:"/projects",
+            name:"Projects",
+            icon:<FaLaravel/>
         },
         {
-            path:"/analytics",
-            name:"Analytics",
-            icon:<FaRegChartBar/>
+            path:"/products",
+            name:"Products",
+            icon:<FaProductHunt/>
         },
         {
-            path:"/comment",
-            name:"Comment",
-            icon:<FaCommentAlt/>
+            path:"/tickets",
+            name:"Tickets",
+            icon:<FaGrin/>
         },
         {
-            path:"/product",
-            name:"Product",
-            icon:<FaShoppingBag/>
+            path:"/invoices",
+            name:"Invoices",
+            icon:<FaFile/>
         },
         {
-            path:"/productList",
-            name:"Product List",
-            icon:<FaThList/>
-        }
+            path:"/credit note",
+            name:"Credit Note",
+            icon:<FaFileSignature/>
+        }, 
+        {
+            path:"/estimates",
+            name:"Estimates",
+            icon:<FaChartBar/>
+        }, 
+        {
+            path:"/payments",
+            name:"Payments",
+            icon:<FaPaypal/>
+        }, 
+        {
+            path:"/events",
+            name:"Events",
+            icon:<FaBalanceScale/>
+        }, 
+       
     ]
     return (
         <div className="container">
            <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
                <div className="top_section">
-                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Logo</h1>
+                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Client</h1>
                    <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
                        <FaBars onClick={toggle}/>
                    </div>

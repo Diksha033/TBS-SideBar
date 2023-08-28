@@ -3,11 +3,14 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard.jsx';
-import About from './pages/About.jsx';
-import Analytics from './pages/Analytics.jsx';
-import Comment from './pages/Comment.jsx';
-import Product from './pages/Product.jsx';
-import ProductList from './pages/ProductList.jsx';
+import Projects from './pages/Projects';
+import Products from './pages/Products.jsx';
+import Tickets from './pages/Tickets';
+import Invoices from './pages/Invoices';
+// import Credit Note from './pages/Credit Note';
+import Estimates from './pages/Estimates';
+import Payments from './pages/Payments';
+import Events from './pages/Events';
 
 const App = () => {
   return (
@@ -16,11 +19,15 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/comment" element={<Comment />} />
-          <Route path="/analytics" element={<Analytics />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/productList" element={<ProductList />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/tickets" element={<Tickets />} />
+          <Route path="/invoices" element={<Invoices />} />
+          {/* <Route path="/credit note" element={<Credit Note />} /> */}
+          <Route path="/estimates" element={<Estimates/>} />
+          <Route path="/payments" element={<Payments />} />
+          <Route path="/events" element={< Events/>} />
+
         </Routes>
       </Sidebar>
     </BrowserRouter>
